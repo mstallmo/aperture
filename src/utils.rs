@@ -1,10 +1,10 @@
-use reqwest;
-use std::fs::File;
-use std::path::Path;
-use std::io::copy;
-use std::error::Error;
-use tar::Archive;
 use flate2::read::GzDecoder;
+use reqwest;
+use std::error::Error;
+use std::fs::File;
+use std::io::copy;
+use std::path::Path;
+use tar::Archive;
 
 pub fn download_model<P: AsRef<Path>>(destination: P) -> Result<(), Box<Error>> {
     println!("Downloading model!");
