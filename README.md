@@ -18,6 +18,3 @@ espial uses the ssd_mobilenet developed by Google for object detection. ssd_mobi
 
 ## Contact
 Mason Stallmo <masonstallmo@gmail.com>
-
-
-
