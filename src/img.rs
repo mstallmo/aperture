@@ -12,7 +12,7 @@ impl GenericImage {
     ///creates a new GenericImage with the given width, height, and pixel data
     pub fn new(width: u32, height: u32, pixel_buffer: Vec<u8>) -> Self {
         GenericImage {
-            image_dimension: ImageDimension{width, height},
+            image_dimension: ImageDimension { width, height },
             pixel_buffer,
         }
     }
@@ -49,7 +49,7 @@ impl DetectionImage for GenericImage {
 impl DetectionImage for image::DynamicImage {
     fn dimension(&self) -> ImageDimension {
         let (width, height) = self.dimensions();
-        ImageDimension{width, height}
+        ImageDimension { width, height }
     }
 
     fn pixel_buffer(&self) -> Vec<u8> {
