@@ -28,7 +28,7 @@ impl DetectionImage for GenericImage {
     }
 
     fn pixel_buffer(&self) -> Vec<u8> {
-        self.pixel_buffer.iter().cloned().collect()
+        self.pixel_buffer.to_vec()
     }
 }
 
