@@ -41,16 +41,25 @@ impl ObjectDetection {
     }
 
     fn input_transform(&self) -> Result<(Operation, Tensor<u8>), Box<Error>> {
-        let (width, height) = self.image.dimension();
+        let image_dimension = self.image.dimension();
         let image_array = Array::from_shape_vec(
-            (height as usize, width as usize, 3),
+            (
+                image_dimension.height as usize,
+                image_dimension.width as usize,
+                3,
+            ),
             self.image.pixel_buffer().to_vec(),
         )?;
         let image_array_expanded = image_array.insert_axis(Axis(0));
 
         let image_tensor_op = self.graph.operation_by_name_required("image_tensor")?;
-        let input_image_tensor = Tensor::new(&[1, u64::from(height), u64::from(width), 3])
-            .with_values(image_array_expanded.as_slice().unwrap())?;
+        let input_image_tensor = Tensor::new(&[
+            1,
+            u64::from(image_dimension.height),
+            u64::from(image_dimension.width),
+            3,
+        ])
+        .with_values(image_array_expanded.as_slice().unwrap())?;
 
         Ok((image_tensor_op, input_image_tensor))
     }
