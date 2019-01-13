@@ -5,6 +5,8 @@ rust:
   - nightly
 cache: cargo
 script:
-  - cargo build --all --release
+  - rustup component add rustfmt
+  - rustup component add clippy
   - cargo fmt --all -- --check
   - cargo clippy --all
+  - cargo build --all --release
