@@ -17,19 +17,19 @@ impl GenericImage {
     }
 }
 
+pub trait DetectionImage {
+    fn dimension(&self) -> (u32, u32);
+    fn pixel_buffer(&self) -> Vec<u8>;
+}
+
 impl DetectionImage for GenericImage {
     fn dimension(&self) -> (u32, u32) {
         (self.width, self.height)
     }
 
     fn pixel_buffer(&self) -> Vec<u8> {
-        self.pixel_buffer.iter().cloned().collect()
+        self.pixel_buffer.to_vec()
     }
-}
-
-pub trait DetectionImage {
-    fn dimension(&self) -> (u32, u32);
-    fn pixel_buffer(&self) -> Vec<u8>;
 }
 
 impl DetectionImage for image::DynamicImage {

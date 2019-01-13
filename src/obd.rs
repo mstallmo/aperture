@@ -43,7 +43,7 @@ impl ObjectDetection {
         let image_array_expanded = image_array.insert_axis(Axis(0));
 
         let image_tensor_op = self.graph.operation_by_name_required("image_tensor")?;
-        let input_image_tensor = Tensor::new(&[1, height as u64, width as u64, 3])
+        let input_image_tensor = Tensor::new(&[1, u64::from(height), u64::from(width), 3])
             .with_values(image_array_expanded.as_slice().unwrap())?;
 
         Ok((image_tensor_op, input_image_tensor))
