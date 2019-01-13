@@ -8,6 +8,7 @@ description = "Object detection using single shot multibox detector"
 readme = "README.md"
 keywords = ["computer", "vision", "tensorflow", "object", "detection"]
 repository = "https://github.com/mstallmo/espial"
+exclude = ["test_output.jpg"]
 
 [badges]
 travis-ci = { repository = "https://github.com/mstallmo/espial", branch = "master" }
