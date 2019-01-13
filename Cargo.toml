@@ -1,5 +1,5 @@
 [package]
-name = "object-detection-rs"
+name = "espial"
 version = "0.1.0"
 authors = ["Mason Stallmo <masonstallmo@gmail.com>"]
 edition = "2018"
