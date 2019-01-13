@@ -6,7 +6,7 @@ edition = "2018"
 license = "MIT"
 description = "Object detection using single shot multibox detector"
 readme = "README.md"
-keywords = ["computer_vision", "tensorflow", "object detection"]
+keywords = ["computer", "vision", "tensorflow", "object", "detection"]
 repository = "https://github.com/mstallmo/espial"
 
 [badges]
