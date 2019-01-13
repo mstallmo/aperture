@@ -1,0 +1,12 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+cache: cargo
+script:
+  - rustup component add rustfmt
+  - rustup component add clippy
+  - cargo fmt --all -- --check
+  - cargo clippy
+  - cargo build --all --release
