@@ -15,6 +15,7 @@ espial uses the ssd_mobilenet developed by Google for object detection. ssd_mobi
 
 
 ## Code of Conduct
+The espial project follows a strict community code of conduct. Information about our code of conduct can be found at [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ## Contact
 Mason Stallmo <masonstallmo@gmail.com>
