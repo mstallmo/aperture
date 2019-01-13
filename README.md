@@ -12,7 +12,7 @@ espial uses the ssd_mobilenet developed by Google for object detection. ssd_mobi
 
 
 ## Changelog
-
+Project changes and releases will be captured in the [CHANGELOG.md](CHANGELOG.md) file that can be found in this repository.
 
 ## Code of Conduct
 The espial project follows a strict community code of conduct. Information about our code of conduct can be found at [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
