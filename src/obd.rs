@@ -6,6 +6,11 @@ use tensorflow::{
     Graph, ImportGraphDefOptions, Operation, Session, SessionOptions, SessionRunArgs, Tensor,
 };
 
+///Contains the Single Shot MultiBox Detector graph, the tensorflow session, and the image to inference.
+///
+/// ObjectDetection handles the initialization of the tensorflow session with the frozen graph. Converts the input image
+/// from raw pixels to the tensor shape we need for input. Feeds the input into the input tensor of the graph
+/// and returns the resulting output tensors in a HashMap.
 pub struct ObjectDetection {
     graph: Graph,
     sess: Session,
@@ -13,6 +18,7 @@ pub struct ObjectDetection {
 }
 
 impl ObjectDetection {
+    ///Initialize the tensorflow session with the frozen graph definition.
     pub fn init() -> Self {
         let mut graph = Graph::new();
         let proto =
@@ -29,8 +35,8 @@ impl ObjectDetection {
             image: Box::new(img::GenericImage::default()),
         }
     }
-
-    pub fn input<T: img::DetectionImage + 'static>(&mut self, image: T) {
+    ///Pass in the input image to be inferenced on. Input must implement the DetectionImage trait
+    pub fn input<I: img::DetectionImage + 'static>(&mut self, image: I) {
         self.image = Box::new(image);
     }
 
@@ -48,7 +54,8 @@ impl ObjectDetection {
 
         Ok((image_tensor_op, input_image_tensor))
     }
-
+    ///Run the inference on the inputted image transforming the image to the shape of the image input tensor,
+    ///performing the inferencing, and mapping the output tensors into the returned HashMap.
     pub fn run(&mut self) -> Result<HashMap<&str, Tensor<f32>>, Box<Error>> {
         let (image_tensor_op, input_image_tensor) = self.input_transform()?;
 
