@@ -1,11 +1,9 @@
 use crate::img;
-use crate::utils;
 pub use hashbrown::hash_map::HashMap;
 use ndarray::prelude::*;
 use std::error::Error;
 use std::fs::File;
 use std::io::Read;
-use std::path::Path;
 use tensorflow::{
     Graph, ImportGraphDefOptions, Operation, Session, SessionOptions, SessionRunArgs, Tensor,
 };
@@ -23,10 +21,6 @@ impl ObjectDetection {
     pub fn init() -> Self {
         let mut graph = Graph::new();
         let mut proto = Vec::new();
-
-        if !Path::new(SSD_MODEL_PATH).exists() {
-            utils::download_model("./models/ssd_mobilenet_v1_coco_2017_11_17.tar.gz").unwrap();
-        }
 
         File::open(SSD_MODEL_PATH)
             .unwrap()
