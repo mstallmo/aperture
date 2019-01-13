@@ -8,5 +8,5 @@ script:
   - rustup component add rustfmt
   - rustup component add clippy
   - cargo fmt --all -- --check
-  - cargo clippy --all
+  - cargo clippy
   - cargo build --all --release
