@@ -6,3 +6,5 @@ rust:
 cache: cargo
 script:
   - cargo build --all --release
+  - cargo fmt --all -- --check
+  - cargo clippy --all
