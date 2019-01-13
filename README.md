@@ -1,5 +1,5 @@
 # espial [![Build Status](https://travis-ci.com/mstallmo/espial.svg?token=U4Xc2CnrxqK79g1m6A4x&branch=master)](https://travis-ci.com/mstallmo/espial)
-A Rust crate for doing object detection using Tensorflow!
+[ih-spahy-uh l] A Rust crate for doing object detection using Tensorflow!
 
 espial uses the ssd_mobilenet developed by Google for object detection. ssd_mobilenet provides a quick execution time as well as a small size to allow for the most diverse range of deployment of the crate.
 
