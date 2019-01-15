@@ -14,4 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Public trait for abstracting image types passed into the detection
 - Base object detection capability
 
-[Unreleased]: https://github.com/mstallmo/espial/commits/master
+[Unreleased]: https://github.com/mstallmo/aperature/commits/master

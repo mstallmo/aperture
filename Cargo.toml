@@ -1,5 +1,5 @@
 [package]
-name = "espial"
+name = "aperature"
 version = "0.1.0"
 authors = ["Mason Stallmo <masonstallmo@gmail.com>"]
 edition = "2018"
@@ -7,11 +7,11 @@ license = "MIT"
 description = "Object detection using single shot multibox detector"
 readme = "README.md"
 keywords = ["computer", "vision", "tensorflow", "object", "detection"]
-repository = "https://github.com/mstallmo/espial"
+repository = "https://github.com/mstallmo/aperature"
 exclude = ["test_output.jpg"]
 
 [badges]
-travis-ci = { repository = "https://github.com/mstallmo/espial", branch = "master" }
+travis-ci = { repository = "https://github.com/mstallmo/aperature", branch = "master" }
 
 [dependencies]
 tensorflow = "0.11.0"

@@ -1,9 +1,9 @@
 #![deny(missing_docs)]
-//! # Espial
+//! # Aperature
 //! A library for performing object detection utilizing the Single Shot MultiBox
 //! Detector model created by google.
 //!
-//! Input for espial takes a type implementing the DetectionImage trait and performs object detection on
+//! Input for aperature takes a type implementing the DetectionImage trait and performs object detection on
 //! that image. The list of objects that can be detected via the label map for the model can be found
 //! [here](https://github.com/tensorflow/models/blob/master/research/object_detection/data/mscoco_label_map.pbtxt)
 //!
