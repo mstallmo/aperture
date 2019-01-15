@@ -1,8 +1,15 @@
-# aperature [![Build Status](https://travis-ci.com/mstallmo/aperature.svg?token=U4Xc2CnrxqK79g1m6A4x&branch=master)](https://travis-ci.com/mstallmo/aperature)
-[ih-spahy-uh l] A Rust crate for doing object detection using Tensorflow!
+# aperature 
+[![Build Status](https://travis-ci.com/mstallmo/aperature.svg?token=U4Xc2CnrxqK79g1m6A4x&branch=master)](https://travis-ci.com/mstallmo/aperature) 
+[![Docs](https://docs.rs/aperature/badge.svg)](https://docs.rs/aperature/badge.svg)
+[![crates.io](https://img.shields.io/crates/v/aperature.svg)](https://img.shields.io/crates/v/aperature.svg)
+
+![Alt text](aperature.png "Aperature")
+
+A Rust crate for doing object detection using Tensorflow!
 
 aperature uses the ssd_mobilenet developed by Google for object detection. ssd_mobilenet provides a quick execution time as well as a small size to allow for the most diverse range of deployment of the crate.
 
+**[Documentation](https://docs.rs/aperature)**
 
 ## Usage
 **Input:** Input images can be provided through img::GenericImage that can be found in this crate or by passing in the Image struct found in the [pison image crate](https://github.com/PistonDevelopers/image). To use other image types not listed here there is a public trait `DetectionImage` that is also accepted as input to the model. 
