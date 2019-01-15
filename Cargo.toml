@@ -9,7 +9,7 @@ description = "Object detection using single shot multibox detector"
 readme = "README.md"
 keywords = ["computer", "vision", "tensorflow", "object", "detection"]
 repository = "https://github.com/mstallmo/aperature"
-exclude = ["test_output.jpg"]
+exclude = ["test_output.jpg", "models/*"]
 
 [badges]
 travis-ci = { repository = "https://github.com/mstallmo/aperature", branch = "master" }
