@@ -3,12 +3,13 @@ name = "aperature"
 version = "0.1.0"
 authors = ["Mason Stallmo <masonstallmo@gmail.com>"]
 edition = "2018"
+build = "build.rs"
 license = "MIT"
 description = "Object detection using single shot multibox detector"
 readme = "README.md"
 keywords = ["computer", "vision", "tensorflow", "object", "detection"]
 repository = "https://github.com/mstallmo/aperature"
-exclude = ["test_output.jpg"]
+exclude = ["test_output.jpg", "models/*"]
 
 [badges]
 travis-ci = { repository = "https://github.com/mstallmo/aperature", branch = "master" }
@@ -19,3 +20,8 @@ image = "0.20.1"
 ndarray = "0.12.1"
 imageproc = "0.17.0"
 hashbrown = "0.1.7"
+
+[build-dependencies]
+reqwest = "0.9.6"
+tar = "0.4.20"
+flate2 = "1.0.6"
