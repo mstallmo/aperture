@@ -38,7 +38,7 @@ pub trait DetectionImage {
 
 impl DetectionImage for GenericImage {
     fn dimension(&self) -> ImageDimension {
-        self.image_dimension.clone()
+        self.image_dimension
     }
 
     fn pixel_buffer(&self) -> Vec<u8> {
