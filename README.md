@@ -1,4 +1,4 @@
-# aperature 
+# aperture 
 [![Build Status](https://travis-ci.com/mstallmo/aperature.svg?token=U4Xc2CnrxqK79g1m6A4x&branch=master)](https://travis-ci.com/mstallmo/aperature) 
 [![Docs](https://docs.rs/aperature/badge.svg)](https://docs.rs/aperature/badge.svg)
 [![crates.io](https://img.shields.io/crates/v/aperature.svg)](https://img.shields.io/crates/v/aperature.svg)

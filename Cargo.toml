@@ -1,6 +1,6 @@
 [package]
 name = "aperature"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Mason Stallmo <masonstallmo@gmail.com>"]
 edition = "2018"
 build = "build.rs"
@@ -16,7 +16,7 @@ travis-ci = { repository = "https://github.com/mstallmo/aperature", branch = "ma
 
 [dependencies]
 tensorflow = "0.12.0"
-image = "0.20.1"
+image = "0.21.0"
 ndarray = "0.12.1"
 imageproc = "0.17.0"
 hashbrown = "0.1.7"

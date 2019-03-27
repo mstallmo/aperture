@@ -14,7 +14,7 @@ use tensorflow::{
 pub struct ObjectDetection {
     graph: Graph,
     sess: Session,
-    image: Box<img::DetectionImage>,
+    image: Box<img::DetectionImage + Send>,
 }
 
 impl ObjectDetection {
@@ -36,7 +36,10 @@ impl ObjectDetection {
         }
     }
     ///Pass in the input image to be inferenced on. Input must implement the DetectionImage trait
-    pub fn input<I: img::DetectionImage + 'static>(&mut self, image: I) {
+    pub fn input<I: img::DetectionImage + 'static>(&mut self, image: I)
+    where
+        I: std::marker::Send,
+    {
         self.image = Box::new(image);
     }
 
@@ -99,3 +102,6 @@ impl ObjectDetection {
         Ok(tensor_map)
     }
 }
+
+unsafe impl std::marker::Send for ObjectDetection {}
+unsafe impl std::marker::Sync for ObjectDetection {}
