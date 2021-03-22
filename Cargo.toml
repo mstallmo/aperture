@@ -19,7 +19,7 @@ tensorflow = "0.11.0"
 image = "0.21.0"
 ndarray = "0.12.1"
 imageproc = "0.17.0"
-hashbrown = "0.1.7"
+hashbrown = "0.11.1"
 
 [build-dependencies]
 reqwest = "0.9.6"
